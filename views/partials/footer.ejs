@@ -1,0 +1,59 @@
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="delete">Delete Confirmation</h5>
+        </div>
+        <div class="modal-body">
+            Are u sure to delete this Data?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn pt-2 pb-2 pl-4 pr-4 bg-white" data-dismiss="modal" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);">Close</button>
+          <a type="button" class="btn pt-2 pb-2 pl-3 pr-3 text-white" id="confirmDelete" style="border-radius: 5px; background-color: #F29F05; font-weight: 500; font-size: 18px;">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="addTable" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addTable">Add Table</h5>
+        </div>
+        <form>
+            <div class="modal-body">
+                <label>Nomor Meja</label>
+                <input type="number" name="no_meja">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn pt-2 pb-2 pl-4 pr-4 bg-white" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);" data-dismiss="modal">Close</button>
+              <input type="submit" class="btn pt-2 pb-2 pl-3 pr-3 text-white" style="border-radius: 5px; background-color: #F29F05; font-weight: 500; font-size: 18px;" id="confirmAddTable"></a>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- sweet alert -->
+<script src="sweetalert2.all.min.js"></script>
+<!-- sweet alert -->
+
+<script type="text/javascript">
+  function success(){
+      Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
+  }
+</script>
+
+<!-- bootstrap 4 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- bootstrap 4 -->
+<script src="/js/index.js"></script>
+<footer class="mt-5 text-center p-3">Made in by @HAKTIV8</footer>
+</html>

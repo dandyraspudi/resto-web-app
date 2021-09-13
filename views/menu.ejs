@@ -1,0 +1,45 @@
+<%- include('partials/header', { title: 'Resto List'}) %>
+
+<body>
+    <div class="container">
+        <h1 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;font-size: 50px;">Menu Resto <%= resto.name%></h1>
+        <br>
+
+        <!-- tombol tambahkan menu dan list order hanya jika karyawan login-->
+        <% if(session.isLogin && session.role !== 'SU' && session.restoranId == data[0].RestoranId) {%>
+        <a class="text-white btn pt-2 pb-2 pr-3 ml-3" style="background-color: #F29F05;" href="/resto/<%=resto.id%>/menu/add">Add Menu</a>
+        <a class="text-white font-weight-bold btn pt-2 pb-2 pr-3 ml-3" style="background-color:#F25C05;" href="/resto/<%=resto.id%>/listorder">List Order</a>
+        <a class="font-weight-bold btn pt-2 pb-2 pr-3 ml-3" style="border:3px solid #F25C05; color: #F25C05;" href="/resto/<%=resto.id%>/listtable">List Table</a>
+        <% } %>
+
+        <div class="row d-flex justify-content-around mt-3">
+        <% if(data.length > 0){ data.forEach(menu => { %>
+            <div class="card mb-5" style="width: 20rem; border-radius: 25px !important;box-shadow: -2px 6px 44px 1px rgba(0,0,0,0.13);
+            -webkit-box-shadow: -2px 6px 44px 1px rgba(0,0,0,0.13);
+            -moz-box-shadow: -2px 6px 44px 1px rgba(0,0,0,0.13);">
+                <img class="card-img-top" src="<%= getImage(menu.image_path) %>" alt="Card image cap" style="border-radius: 25px 25px 0px 0px !important; height: 250px;">
+                <div class="card-body">
+                    <h5 style="font-family: 'Noto Sans', sans-serif;
+                    font-family: 'Roboto Condensed', sans-serif;font-size: 26px;"><%= menu.name %></h5>
+                    <p class="card-text" style="height:30px;"><%= menu.detail %></p>
+                    <p class="card-text" style="height:30px;font-size: 18px;font-weight: 500;"><%= currency(menu.price) %></p>
+                    <% if(session.isLogin && session.role !== 'SU' && session.restoranId == data[0].RestoranId) {%>
+                        <a class="btn btn-primary pl-4 pr-4" href="/resto/<%=menu.RestoranId%>/menu/edit/<%=menu.id%>">Edit</a>
+                        <a class="btn pl-4 pr-4" href="/resto/<%=menu.RestoranId%>/menu/delete/<%=menu.id%>" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);">Delete</a>
+                    <% } %>
+                        <a onclick="order('<%=menu.id%>')" class="btn pt-2 pb-2 pl-3 pr-3 text-white w-100" style="border-radius: 5px; background-color: #F29F05; font-weight: 500; font-size: 18px;" <% if(session.isLogin && session.role !== 'SU' && session.restoranId == data[0].RestoranId) {%> hidden <%}%>>Order</a>
+                </div>
+            </div>
+            <% })} %>
+        </div>
+
+        <div class="row">
+            <% if(!session.isLogin) {%>
+            <a class="btn m-auto text-white pl-5 pr-5" style="font-size: 18px; font-weight: 500; border-radius: 5px; background-color: #F25C05;" id='orderbtn' onclick="listOrder('<%=resto.id%>')">Lihat Orderan</a>
+            <% } %>
+        </div>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

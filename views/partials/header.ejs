@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>
+        <%=title%>
+    </title>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Roboto+Condensed:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+</head>
+
+<div class="container">
+
+    <nav class="navbar navbar-expand-lg" style="margin-top: 20px;border-radius: 20px; margin-bottom: 40px;" id="nav">
+        <a class="navbar-brand m-2 font-weight-bold" style="color: rgb(61, 58, 58);font-size: 29px;font-family: 'Roboto Condensed', sans-serif;" href="/">madang</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <% if(!session.isLogin) { %>
+                    <form class="nav-link btn pt-1 pb-1 pr-3 pl-3" method="POST" action="/searchorder">
+                        <input type="search" name="id" placeholder="masukkan id pesanan" style="border: 2px solid #D93D04; background-color: #fff;font-size: 20px; font-weight: 500;border-radius: 5px; color: #D93D04;">
+                        <input type="submit" value="search" style="border: 3px solid #D93D04; background-color: #D93D04;font-size: 20px; font-weight: 500;border-radius: 5px; color: #fff;">
+                    </form>
+                <li class="nav-item">
+                    <button class="nav-link btn pt-1 pb-1 pr-3 pl-3" style="border: 3px solid #D93D04; background-color: #fff;font-size: 20px; font-weight: 500;border-radius: 10px; color: #D93D04;" onclick="window.location.href='/user/login'">Login</button>
+                </li>
+                <% } else {%>
+                <li class="nav-item"></li>
+                    <label class="pt-1 pb-1 pr-3 pl-3" style="background-color: #fff;font-size: 20px; font-weight: 500; color: #D93D04;" disabled><%=session.name %>, <%= session.role%></label>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn pt-1 pb-1 pr-3 pl-3" style="border: 3px solid #D93D04; background-color: #fff;font-size: 20px; font-weight: 500;border-radius: 10px; color: #D93D04;" onclick="window.location.href='/user/logout'">Logout</button>
+                </li>
+                <% } %> 
+            </ul>
+        </div>
+    </nav>
+
+</div>

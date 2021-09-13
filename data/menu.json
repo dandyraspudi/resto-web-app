@@ -1,0 +1,236 @@
+[
+    {
+        "name": "Chillie Fries",
+        "detail": "Delicious",
+        "price": 35000,
+        "quantity": 100,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-chillie-fries.jpeg",
+        "RestoranId": 1
+    },
+    {
+        "name": "Valentine Set Menu",
+        "detail": "Delicious",
+        "price": 50000,
+        "quantity": 20,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-valentine-s-day-set-menu.jpeg",
+        "RestoranId": 1
+    },
+    {
+        "name": "us-tenderloin-steak",
+        "detail": "Delicious",
+        "price": 78000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-us-tenderloin-steak.jpeg",
+        "RestoranId": 1
+    },
+    {
+        "name": "crab-with-butter-garlic",
+        "detail": "Delicious",
+        "price": 125000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-crab-with-butter-garlic.jpeg",
+        "RestoranId": 1
+    },
+    {
+        "name": "dessert",
+        "detail": "Delicious",
+        "price": 40000,
+        "quantity": 50,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-dessert.jpeg",
+        "RestoranId": 1
+    },
+    {
+        "name": "spanish-pork-ribs",
+        "detail": "Delicious",
+        "price": 80000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-spanish-pork-ribs.jpeg",
+        "RestoranId": 2
+    },
+    {
+        "name": "shrimp-master",
+        "detail": "Delicious",
+        "price": 99000,
+        "quantity": 50,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-shrimp-master.jpeg",
+        "RestoranId": 2
+    },
+    {
+        "name": "served-western-and-jap",
+        "detail": "Delicious",
+        "price": 75000,
+        "quantity": 50,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-served-western-and-jap.jpeg",
+        "RestoranId": 2
+    },
+    {
+        "name": "seafood-platter",
+        "detail": "Delicious",
+        "price": 125000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-seafood-platter.jpeg",
+        "RestoranId": 2
+    },
+    {
+        "name": "salt-crusted-beef-ribs",
+        "detail": "Delicious",
+        "price": 88000,
+        "quantity": 35,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-salt-crusted-beef-ribs.jpeg",
+        "RestoranId": 2
+    },
+    {
+        "name": "ribeye-wagyu",
+        "detail": "Delicious",
+        "price": 45000,
+        "quantity": 40,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-ribeye-wagyu.jpeg",
+        "RestoranId": 3
+    },
+    {
+        "name": "marble-9-wagyu-sirloin",
+        "detail": "Delicious",
+        "price": 90000,
+        "quantity": 33,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-marble-9-wagyu-sirloin.jpeg",
+        "RestoranId": 3
+    },
+    {
+        "name": "tony-roma-s",
+        "detail": "Delicious",
+        "price": 60000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-tony-roma-s.jpeg",
+        "RestoranId": 3
+    },
+    {
+        "name": "gurame-mangga",
+        "detail": "Delicious",
+        "price": 75000,
+        "quantity": 10,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-gurame-mangga.jpeg",
+        "RestoranId": 3
+    },
+    {
+        "name": "luxury-katsu",
+        "detail": "Delicious",
+        "price": 45000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-luxury-katsu.jpeg",
+        "RestoranId": 3
+    },
+    {
+        "name": "large-beef-short-rib",
+        "detail": "Delicious",
+        "price": 75000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-large-beef-short-rib.jpeg",
+        "RestoranId": 4
+    },
+    {
+        "name": "cheese-cold-cut-selection",
+        "detail": "Delicious",
+        "price": 45000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-cheese-cold-cut-selection.jpeg",
+        "RestoranId": 4
+    },
+    {
+        "name": "calamary-salad",
+        "detail": "Delicious",
+        "price": 28000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-calamary-salad.jpeg",
+        "RestoranId": 4
+    },
+    {
+        "name": "al-nafoura-s-cuisines",
+        "detail": "Delicious",
+        "price": 35000,
+        "quantity": 45,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-al-nafoura-s-cuisines.jpeg",
+        "RestoranId": 4
+    },
+    {
+        "name": "endless-wagyu",
+        "detail": "Delicious",
+        "price": 85000,
+        "quantity": 20,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-endless-wagyu.jpeg",
+        "RestoranId": 4
+    },
+    {
+        "name": "buncis-ayam",
+        "detail": "Delicious",
+        "price": 20000,
+        "quantity": 50,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-buncis-ayam.jpeg",
+        "RestoranId": 5
+    },
+    {
+        "name": "best-ribs-can-t-resist",
+        "detail": "Delicious",
+        "price": 90000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-best-ribs-can-t-resist.jpeg",
+        "RestoranId": 5
+    },
+    {
+        "name": "ayam-susu-pedas",
+        "detail": "Delicious",
+        "price": 35000,
+        "quantity": 100,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-ayam-susu-pedas.jpeg",
+        "RestoranId": 5
+    },
+    {
+        "name": "arabic-pizza-pizza-bread",
+        "detail": "Delicious",
+        "price": 56000,
+        "quantity": 50,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-arabic-pizza-pizza-bread.jpeg",
+        "RestoranId": 5
+    },
+    {
+        "name": "angus-house-at-plaza",
+        "detail": "Delicious",
+        "price": 70000,
+        "quantity": 15,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-angus-house-at-plaza.jpeg",
+        "RestoranId": 5
+    },
+    {
+        "name": "Spring Roll",
+        "detail": "Delicious",
+        "price": 25000,
+        "quantity": 30,
+        "available": true,
+        "image_path": "public/assets/menuImage/1629833063703-spring-roll.jpeg",
+        "RestoranId": 5
+    }
+]

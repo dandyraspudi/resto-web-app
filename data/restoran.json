@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Kahyangan Restaurant",
+        "alamat": "Jalan M.H. Thamrin No. 59 Pullman Jakarta Indonesia Hotel, 28th Floor Wisma Nusantara, Jakarta 10350 Indonesia",
+        "image_path": "public/assets/restoImage/1629833063703-kahyangan.jpeg"
+    },
+    {
+        "name": "Al Jazeerah Signature",
+        "alamat": "Jl. Johar No. 8, Jakarta Indonesia",
+        "image_path": "public/assets/restoImage/1629833063703-AlJazeeraSignature.jpeg"
+    },
+    {
+        "name": "Teras Dharmawangsa",
+        "alamat": "Jl. Darmawangsa VI & IX Darmawangsa Square City Walk, Jakarta 12160 Indonesia",
+        "image_path": "public/assets/restoImage/1629833063703-teras-dharmawangsa.jpeg"
+    },
+    {
+        "name": "Al Nafoura",
+        "alamat": "Jl. Jendral Sudirman 18 - 20 Lobby Level Hotel Le Meridien, Jakarta 10220 Indonesia",
+        "image_path": "public/assets/restoImage/1629833063703-al-nafoura-lebanese-restaurant.jpeg"
+    },
+    {
+        "name": "PASOLA Restaurant",
+        "alamat": "Jl. Jend Sudirman Kav 52 - 53 The Ritz-Carlton Jakarta, Pacific Place Level 6, Jakarta 12190 Indonesia",
+        "image_path": "public/assets/restoImage/1629833063703-pasola-restaurant-buffet.jpeg"
+    }
+]

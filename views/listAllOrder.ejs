@@ -1,0 +1,59 @@
+<%- include('partials/header', { title: 'Resto List'}) %>
+
+<body>
+    <div class="container">
+        <h1 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;font-size: 50px;">All Order</h1>
+        <br>
+        <table class="table table-striped" style="text-align: center;">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Meja</th>
+                <th>Menu</th>
+                <th>Status</th>
+                <th>Option</th>
+            </tr>
+            <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%= i + 1 %></td>
+                <td><%=data[i].name%></td>
+                <td><%=data[i].Seat.no_meja%></td>
+                <td>
+                    <table class="table" style="text-align: center;">
+                        <% data[i].Menus.forEach(menu => { %>
+                            <tr>
+                                <td style="height: 55px;"><%=menu.name%></td>
+                            </tr>
+                        <% }) %>
+                    </table>
+                </td>
+                <td>
+                    <table class="table" style="text-align: center;">
+                        <% data[i].Menus.forEach(menu => { %>
+                            <tr>
+                                <td style="height: 55px;"><%=menu.Receipt.getStatus()%></td>
+                            </tr>
+                        <% }) %>
+                    </table>
+                </td>
+                <td>
+                    <table class="table" style="text-align: center;">
+                        <% data[i].Menus.forEach(menu => { %>
+                            <tr>
+                                <% if(!menu.Receipt.hasCooked){%>
+                                <td><a class="btn btn text-white pl-3 pr-3 mr-2" style="border-radius: 5px; background-color: #F29F05;" href="./finished?receipt=<%=menu.Receipt.MenuId%>,<%=menu.Receipt.VisitorId%>">finished</a></td>
+                                <% } else { %>
+                                    <td><a class="btn" href="./delete?receipt=<%=menu.Receipt.MenuId%>,<%=menu.Receipt.VisitorId%>" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);">delete</a></td>
+                                <% } %>
+                            </tr>
+                        <% }) %>
+                    </table>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

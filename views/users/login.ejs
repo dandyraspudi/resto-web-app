@@ -1,0 +1,28 @@
+<%- include('../partials/header', { title: 'Login'}) %>
+
+<body style="background-color: #F2F2F2;">
+    <div class="container w-50 m-auto p-5" style="background-color: #fff;border-radius: 35px;">
+        <h1 style="color: rgb(61, 58, 58);font-size: 29px;font-family: 'Roboto Condensed', sans-serif;color: #D93D04;" class="text-center">madang</h1>
+        <form method="POST" action="/user/login" class="">
+            <% if(err){ %> 
+                <div class="alert alert-danger" role="alert" style="color: white; background-color: #D93D04; text-align: center;">
+                    <%= err %>
+                </div>
+            <% } %>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <input type="submit" class="btn text-white w-100 mt-4 mb-3" style="border-radius: 5px; background-color: #F29F05;"></input>
+        </form>
+        <div class="w-100">
+            Login Only For Restaurant Staff
+        </div>
+    </div>
+</body>
+
+<%- include('../partials/footer') %>

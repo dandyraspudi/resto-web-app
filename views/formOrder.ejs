@@ -1,0 +1,57 @@
+<%- include('partials/header', { title: 'Form Order'}) %>
+
+<body style="background-color: #F2F2F2;">
+    <div class="container">
+        <br>
+        <form method="POST" action="/resto/<%=dataMenu[0].RestoranId%>/menu/order" class="p-5 border w-50 m-auto" style="border-radius: 35px;background-color: #fff;">
+        <h1 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;font-size: 50px;">Form Order</h1>
+            <div class="mb-3">
+                <label class="form-label" style="font-size: 20px;font-weight: 500;">No Meja</label><br>
+                <select name="id_meja" required class="form-control" id="exampleFormControlSelect1">
+                    <% for(let i =0; i < dataMeja.length; i++) {%>
+                        <option value="<%=dataMeja[i].id%>"><%=dataMeja[i].no_meja%></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" style="font-size: 20px;font-weight: 500;">Nama</label><br>
+                <input type="text" name="name" required class="form-control" id="exampleFormControlInput1" placeholder="e.g: John Doe">
+            </div>
+            <div class="mb-3">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Makanan</th>
+                            <th scope="col">Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% let price = 0 %>
+                    <% let listId = [] %>
+                    <% for(let i = 0; i < dataMenu.length; i++) {%>
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%=dataMenu[i].name%></td>
+                            <td><%=dataMenu[i].price%></td>
+                        </tr>
+                    <% price += +dataMenu[i].price %>
+                    <% listId.push(dataMenu[i].id) %>
+                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mb-3 text-right">
+                <label class="form-label" style="font-size: 18px;">Total Harga</label>
+                <label class="form-label" style="font-size: 20px;font-weight: 500;"> :   Rp <%=price%></label>
+                <input name="listId" value="<%=listId%>" style="display: none;">
+            </div>
+
+            <a type="button" class="btn pl-2 pr-2 font-weight-bold" href="/resto" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);">Cancel</a>
+            <input type="submit" onclick="success();" class="btn text-white pl-3 pr-3" style="border-radius: 5px; background-color: #F29F05;"></input>
+        </form>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,45 @@
+<%- include('partials/header', { title: 'Resto List'}) %>
+
+<body>
+    <div class="container">
+        <% if(data) {%>
+        <% if(data.Menus.length > 0) {%>
+            <h1 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;font-size: 50px;">List Order For <%= data.name%></h1>
+            <h6 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+            font-family: 'Roboto Condensed', sans-serif;font-size: 20px;">Catat no pesanan anda <%= data.id%></h6>
+            <br>
+            <table class="table table-striped" style="text-align: center;">
+                <tr style="font-size: 20px;">
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+                <% for (let i = 0; i < data.Menus.length; i++) { %>
+                <tr style="font-size: 20px; font-weight: 500;">
+                    <td><%= i + 1 %></td>
+                    <td><%= data.Menus[i].name %></td>
+                    <td><%= data.Menus[i].price %></td>
+                    <td><%= data.Menus[i].Receipt.getStatus() %></td>
+                </tr>
+                <% } %>
+            </table>
+            <% } else { %>
+                <div class="container text-center">
+                    <h1>Hai <%= data.name%>, Semua Orderan telah selesai</h1>
+                    <h1>Terima kasih telah berbelanja di resto kami</h1>
+                </div>
+        <% } %>
+        <% } else {%>
+            <div class="container text-center">
+                <h1 style="font-size: 200px;">404</h1>
+                <h1>Data tidak ditemukan</h1>
+                <h1>Silahkan berbelanja terlebih dahulu</h1>
+                <a onclick="window.location.href='/resto'" class="w-50 mt-5 btn pt-2 pb-2 pl-3 pr-3 text-white" style="border-radius: 5px; background-color: #F29F05;">Show Menu</a>
+            </div>
+        <% } %>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

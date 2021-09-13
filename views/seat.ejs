@@ -1,0 +1,32 @@
+<%- include('partials/header', { title: 'Seat List'}) %>
+
+<body>
+    <div class="container">
+        <h1 class="text-center font-weight-bold mb-5" style="font-family: 'Noto Sans', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;font-size: 50px;">List Seats</h1>
+        <br>
+        <!-- tombol tambahkan menu dan list order hanya jika karyawan login-->
+        <% if(session.isLogin) {%>
+        <a class="btn btn text-white mb-3 pl-5 pr-5 mr-2" style="font-weight: 500; border-radius: 5px; background-color: #F29F05;" href="/resto/<%=data[0].RestoranId%>/addtable" data-toggle="modal" data-target="#addTable">+ Add Table</a>
+        <% } %>
+        <table class="table table-striped" style="text-align: center;">
+            <tr style="font-size: 20px;">
+                <th>No Meja</th>
+                <th>Status</th>
+                <th>Option</th>
+            </tr>
+            <% data.forEach(el => { %>
+            <tr style="font-size: 20px; font-weight: 500;">
+                <td><%= el.no_meja %></td>
+                <td><%= el.status %></td>
+                <td>
+                    <a class="btn btn-primary" href="/resto/<%=el.RestoranId%>/changeStatus/<%=el.id%>">Change Status</a>
+                    <a class="btn" href="/resto/<%=el.RestoranId%>/deletetable/<%=el.id%>" style="color: rgb(240, 18, 18); border: 2px solid rgb(240, 18, 18);">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+</body>
+
+<%- include('partials/footer') %>
